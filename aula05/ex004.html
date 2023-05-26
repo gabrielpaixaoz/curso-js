@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de país</title>
+  </head>
+  <body>
+    <h1>Em que país você vive?</h1>
+    <input type="text" name="lugar" id="lugar" />
+    <input type="button" value="Verificar" onclick="calcular()" />
+    <div id="resultado"></div>
+
+    <script>
+      function calcular() {
+        var lugar = window.document.querySelector('input#lugar').value
+        var res = window.document.querySelector('div#resultado')
+        res.innerHTML = `<p>Você mora em ${lugar}<p>`
+
+        if (lugar == 'Brasil') {
+          res.innerHTML += `<p>Você é Brasileiro!<p>`
+        } else {
+          res.innerHTML += `<p>Você é Estrangeiro!<p>`
+        }
+      }
+    </script>
+  </body>
+</html>
