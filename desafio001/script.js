@@ -1,19 +1,21 @@
 function carregar() {
-  var info = window.document.getElementById('info')
-  var imagem = window.document.getElementById('imagem')
-  var fundo = window.document.getElementById('cor')
+  var msg = window.document.getElementById('msg')
+  var img = window.document.getElementById('imagem')
+  var data = new Date()
+  var hora = data.getHours()
 
-  var hora = new Date()
-  var agora = hora.getHours()
-
-  info.innerHTML = `Agora são ${agora} horas.`
+  msg.innerHTML = `Agora são ${hora} horas.`
   if (hora >= 0 && hora < 12) {
-    imagem.src = 'imagens/bom-dia.jpg'
-    //BOM DIA !
-  } else if (hora >= 12 && hora < 18) {
-    imagem.src = 'imagens/boa-tarde.jpg'
-    //BOA TARDE !
+    // BOM DIA !
+    img.src = 'bom-dia.jpg'
+    document.body.style.background = '#e2cd9f'
+  } else if (hora >= 12 && hora <= 18) {
+    // BOA TARDE !
+    img.src = 'boa-tarde.jpg'
+    document.body.style.background = '#b9846f'
   } else {
-    imagem.src = 'imagens/boa-noite.jpg'
+    // BOA NOITE !
+    img.src = 'boa-noite.jpg'
+    document.body.style.background = '#515154'
   }
 }

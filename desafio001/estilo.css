@@ -15,16 +15,14 @@ section{
 }
 
 
-div#info{
-  margin-bottom: 20px;
-  font-weight: bold;  
-}
+
 
 
 
 
 div{
   text-align: center;
+  margin: 20px
 }
 
 footer{
